@@ -1,0 +1,38 @@
+.list {
+  background-color: #fff;
+  height: 45rem;
+  width: 30rem;
+  outline: 1rem solid #060038;
+  box-shadow: 1rem 1rem 2rem 0.5rem rgba(0, 0, 0, 0.75);
+}
+.tasks {
+  list-style: none;
+  font-size: 2rem;
+  color: black;
+}
+input {
+  height: 3rem;
+  border: 0;
+  border-bottom: 0.3rem black solid;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+input:focus {
+  outline: 0;
+  background-color: #b8b8b8;
+}
+.text {
+  width: 100%;
+  flex-grow: 2;
+}
+.button {
+  background-color: #86b7d3;
+  flex-grow: 1;
+}
+.button:hover {
+  background-color: #6ac8ff;
+  padding: 0.6rem;
+}
+.form {
+  display: flex;
+}
