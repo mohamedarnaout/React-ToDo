@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./task.css";
-
+import check from "./60731.png";
 function Task(props) {
   const [isActive, setIsActive] = useState(false);
 
@@ -8,16 +7,19 @@ function Task(props) {
     setIsActive(!isActive);
     console.log(isActive);
   };
-  const listtasks = props.arr.map((task) => (
-    <div className="flex task">
-      <button
-        className={isActive ? "checked" : "check"}
-        onClick={handleClick}
-      ></button>
-      <h4 className="task-text"> {task}</h4>
+  return (
+    <div>
+      <div className="flex task">
+        <button
+          className={isActive ? "checked" : "check"}
+          onClick={handleClick}
+        >
+          {isActive ? <img src={check} alt="" className="checkmark" /> : ""}
+        </button>
+        <h4 className="task-text"> {props.name}</h4>
+      </div>
     </div>
-  ));
-  return <div className="tasks">{listtasks}</div>;
+  );
 }
 
 export default Task;

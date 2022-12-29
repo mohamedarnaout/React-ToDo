@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./List.css";
-import Task from "../Task/task";
+import Tasks from "../Tasks/tasks";
 
 function List() {
   const [tasks, settasks] = useState([
@@ -13,7 +13,9 @@ function List() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const inputValue = inputRef.current.value;
-    if (inputValue) {
+    if (!inputValue) {
+      alert("please write a task");
+    } else {
       settasks([...tasks, inputValue]);
       console.log(tasks);
       inputRef.current.value = "";
@@ -31,7 +33,7 @@ function List() {
         />
         <input type="submit" value="+" className="button" />
       </form>
-      <Task arr={tasks} />
+      <Tasks arr={tasks} />
     </div>
   );
 }
