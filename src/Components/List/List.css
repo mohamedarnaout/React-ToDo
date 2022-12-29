@@ -33,6 +33,7 @@ input:focus {
   background-color: #6ac8ff;
   padding: 0.6rem;
 }
-.form {
+.flex {
   display: flex;
+  align-items: center;
 }

@@ -1,0 +1,17 @@
+.check {
+  width: 2rem;
+  height: 2rem;
+  border: #060038 0.1rem solid;
+}
+.checked {
+  border: #060038 0.1rem solid;
+  background-color: #45b3f3;
+  width: 2rem;
+  height: 2rem;
+}
+.task {
+  padding: 0.1rem 0.5rem;
+}
+.task-text {
+  padding: 0 0.5rem;
+}
